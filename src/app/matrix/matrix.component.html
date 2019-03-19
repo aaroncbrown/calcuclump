@@ -1,0 +1,9 @@
+<table [@matrixAnimation]="cells ? cells.length : 0" id="matrix-table">
+  <tbody id="matrix-body">
+    <tr *ngFor="let row of cells; let i=index">
+      <td *ngFor="let cell of row; let j=index; trackBy:trackByIndex" class="matrix-cell">
+        <input type="number" step="any" class="form-control text-center cell-input" value="{{cell}}" [(ngModel)]="cells[i][j]" [name]="'input-'+ i + '-' + j">
+      </td>
+    </tr>
+  </tbody>
+</table>

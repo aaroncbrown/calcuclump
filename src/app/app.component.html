@@ -1,0 +1,17 @@
+<div [@sideBarDisplayChange]='sidebarHidden' id="sidebar" class="d-flex flex-column" [ngClass]="{'hidden-sidebar': sidebarHidden}">
+  <fa-icon [icon]="faArrowLeft" id="close-sidebar-icon" class="align-self-end" (click)='closeSideBar()'></fa-icon>
+  <ul class="nav flex-column">
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/home">Home</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/matrix-math">Determinant Finder</a>
+    </li>
+  </ul>
+</div>
+
+<fa-icon id="open-sidebar-icon" class="fa-2x" [icon]="faBars" (click)='openSideBar()'></fa-icon>
+
+<div [@routeAnimations]="o && o.activatedRouteData && o.activatedRouteData['animation']" id="main-content" [ngClass]="{'hidden-sidebar': sidebarHidden}">
+  <router-outlet #o="outlet"></router-outlet>
+</div>

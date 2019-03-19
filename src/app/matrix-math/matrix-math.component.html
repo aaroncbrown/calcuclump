@@ -1,0 +1,18 @@
+<div [@updateWarningMessage]='warningMessage' id="warning-section" class="d-flex justify-content-center">{{warningMessage}}</div>
+
+<div id="dimension-input-section" class="input-group d-flex justify-content-center">
+    <span id="dimension-input-text">Enter in the Matrix Dimension: </span><input type="number" id="dimension-input" class="text-center" [(ngModel)]="dimensionInput">
+    <button type="button" class="btn btn-success submit-dimension-button" (click)="onResizeClick()">Resize</button>
+</div>
+
+<div id="matrix-section">
+    <matrix></matrix>
+</div>
+
+<div [@matrixResized]="{value: matrix.cells.length, params: {matrixLen: '10'}}" class="d-flex justify-content-center lower-section">
+    <button type="button" class="btn btn-primary calculate-determinant-button" (click)="getDeterminant()">Calculate Determinant</button>
+</div>
+
+<div [@matrixResized]="{value: matrix.cells.length, params: {matrixLen: '10'}}" [@determinantChanged]="matrix.determinant" id="determinant-answer-section" class="d-flex justify-content-center lower-section">
+    <span>The Determinant is</span>&nbsp;<span id="determinant-value">{{!isNaN(matrix.determinant) ? matrix.determinant : 'not computable'}}</span>
+</div>

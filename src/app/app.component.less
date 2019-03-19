@@ -1,0 +1,74 @@
+a.nav-link {
+    color: rgb(255, 255, 255);
+    transition: .1s;
+    outline: none;
+}
+
+a.nav-link:hover {
+    color: rgb(255, 200, 25);
+    transition: .1s;
+}
+
+.nav-item {
+    border-bottom-color: rgb(129, 153, 221);
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+    transition: .1s;
+}
+
+.nav-item:last-child {
+    border: none;
+}
+
+.nav-item:hover {
+    background-color: rgb(77, 104, 177);
+    transition: .1s
+}
+
+#close-sidebar-icon {
+    color: rgb(255, 255, 255);  
+    cursor: pointer;
+    padding-right: 5%;
+    transition: .1s
+}
+
+#close-sidebar-icon:hover {
+    color: rgb(255, 200, 25);
+    padding-right: 7%;
+    transition: .1s;
+}
+
+#open-sidebar-icon {
+    cursor: pointer;
+    margin-left: 10px;
+    transition: .1s;
+}
+
+#open-sidebar-icon:hover {
+    color: rgb(77, 104, 177);
+    transition: .1s;
+}
+
+#sidebar {
+    background: rgb(98, 127, 204);
+    font-size: 20px;
+    font-weight: 700;
+    height: 100vh;
+    left: 0;
+    position: fixed;
+    top: 0;
+    transition: .5s;
+    width: 10%;
+    z-index: 1;
+}
+
+#sidebar.hidden-sidebar {
+    margin-left: -10%;
+    transition: .5s;
+}
+
+#hide-button {
+    background-color: #00000000;
+    border: none;
+    outline: none;
+}
