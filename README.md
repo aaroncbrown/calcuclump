@@ -1,2 +1,2 @@
 # calcuclump
-A Angular / TypeScript tool of various calculators
+An Angular / TypeScript tool of various calculators
